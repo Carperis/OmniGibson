@@ -1244,7 +1244,7 @@ class ManipulationRobot(BaseRobot):
             "contact_pos": contact_pos,
         }
         self._ag_obj_in_hand[arm] = ag_obj
-        self._ag_freeze_gripper[arm] = True
+        # self._ag_freeze_gripper[arm] = True
         for joint in self.finger_joints[arm]:
             j_val = joint.get_state()[0][0]
             self._ag_freeze_joint_pos[arm][joint.joint_name] = j_val
